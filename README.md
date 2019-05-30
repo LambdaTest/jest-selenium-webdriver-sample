@@ -17,13 +17,11 @@
     ```
     export LT_USERNAME="YOUR_USERNAME"
     export LT_ACCESS_KEY="YOUR ACCESS KEY"
-    
     ```
     - For Windows
     ```
     set LT_USERNAME="YOUR_USERNAME"
     set LT_ACCESS_KEY="YOUR ACCESS KEY"
-    
     ```
 3. Setup
   * Navigate to the cloned directory
@@ -50,4 +48,4 @@ You will see the test result in the [lambdatest Dashboard](https://automation.la
 ### Resources
 
 ##### [SeleniumHQ Documentation](http://www.seleniumhq.org/docs/)
-##### [Protractor Documentation](https://www.protractortest.org/#/api)
+##### [Jest Documentation](https://jestjs.io/en/)
