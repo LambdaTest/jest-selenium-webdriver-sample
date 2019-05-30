@@ -1,0 +1,46 @@
+{
+  "name": "jest-selenium-webdriver-sample",
+  "version": "0.1.0",
+  "description": "How to use Jest with Selenium tests on lambdatest",
+  "keywords": [
+    "javascript",
+    "selenium",
+    "local",
+    "test",
+    "jest"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "lambda qa",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chromedriver": "^74.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jasmin": "0.0.2",
+    "jasmine": "^3.4.0",
+    "jest": "^24.8.0",
+    "jest-environment-webdriver": "^0.2.0",
+    "jsdom": "^15.1.1",
+    "prettier": "^1.17.1",
+    "rimraf": "^2.6.3",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./jest.config.js",
+    "testEnvironment": "jest-environment-webdriver",
+    "testEnvironmentOptions": {
+      "browser": "chrome"
+    }
+  }
+}
