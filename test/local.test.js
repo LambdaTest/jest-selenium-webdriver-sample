@@ -1,7 +1,6 @@
 const webdriver = require('selenium-webdriver');
-const {until} = require('selenium-webdriver');
-const {By} = require('selenium-webdriver');
-const {chrome} = require('selenium-webdriver/chrome')
+const { until } = require('selenium-webdriver');
+const { By } = require('selenium-webdriver');
 
 const getElementById = async (driver, id, timeout = 2000) => {
   const el = await driver.wait(until.elementLocated(By.id(id)), timeout);
@@ -22,45 +21,35 @@ describe('webdriver', () => {
   let driver;
 
   beforeAll(async () => {
-
-    driver = new webdriver.Builder()
-      .forBrowser('chrome')
-      .build();
+    driver = new webdriver.Builder().forBrowser('chrome').build();
 
     // eslint-disable-next-line no-undef
-    await driver.get(
-      `https://lambdatest.github.io/sample-todo-app/`,
-    );
+    await driver.get(`https://lambdatest.github.io/sample-todo-app/`);
   }, 10000);
 
   afterAll(async () => {
     await driver.quit();
   }, 15000);
 
-  test(
-      'test',
-      async () => {
-      
-      const lnk = await getElementByName(driver, 'li1');
-      await lnk.click();
-      
-      const lnk1 = await getElementByName(driver, 'li2');
-      await lnk1.click();
+  test('test', async () => {
+    const lnk = await getElementByName(driver, 'li1');
+    await lnk.click();
 
-      const inpf = await getElementById(driver, 'sampletodotext');
-      await inpf.clear();
-      await inpf.sendKeys("Yey, Let's add it to list");
+    const lnk1 = await getElementByName(driver, 'li2');
+    await lnk1.click();
 
-      const btn = await getElementById(driver, 'addbutton');
-      await btn.click();
+    const inpf = await getElementById(driver, 'sampletodotext');
+    await inpf.clear();
+    await inpf.sendKeys("Yey, Let's add it to list");
 
-      const output = await getElementByXpath(driver, '//html/body/div/div/div/ul/li[6]/span');
-      const outputVal = await output.getText();
-      console.log(outputVal);
+    const btn = await getElementById(driver, 'addbutton');
+    await btn.click();
 
-      expect(outputVal).toEqual("Yey, Let's add it to list");
-      
-    },
-    10000,
-  );
+    const output = await getElementByXpath(
+      driver,
+      '//html/body/div/div/div/ul/li[6]/span'
+    );
+    const outputVal = await output.getText();
+    expect(outputVal).toEqual("Yey, Let's add it to list");
+  }, 10000);
 });

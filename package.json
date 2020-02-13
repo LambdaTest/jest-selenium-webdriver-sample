@@ -42,5 +42,8 @@
     "testEnvironmentOptions": {
       "browser": "chrome"
     }
+  },
+  "dependencies": {
+    "@lambdatest/node-rest-client": "^1.0.0"
   }
 }
