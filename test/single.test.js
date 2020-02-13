@@ -40,7 +40,6 @@ let sessionId = null;
 
 describe('webdriver', () => {
   let driver;
-
   beforeAll(async () => {
     driver = new webdriver.Builder()
       .usingServer(
@@ -53,11 +52,11 @@ describe('webdriver', () => {
     });
     // eslint-disable-next-line no-undef
     await driver.get(`https://lambdatest.github.io/sample-todo-app/`);
-  }, 20000);
+  }, 30000);
 
   afterAll(async () => {
     await driver.quit();
-  }, 25000);
+  }, 40000);
 
   test('test', async () => {
     try {
@@ -85,13 +84,15 @@ describe('webdriver', () => {
       await webdriverErrorHandler(err, driver);
       throw err;
     }
-  }, 20000);
+  }, 35000);
 });
 
 async function webdriverErrorHandler(err, driver) {
   console.error('Unhandled exception! ' + err.message);
   if (driver && sessionId) {
-    await driver.quit();
+    try {
+      await driver.quit();
+    } catch (_) {}
     await updateJob(sessionId, 'failed');
   }
 }
