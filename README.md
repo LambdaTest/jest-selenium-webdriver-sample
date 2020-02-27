@@ -1,6 +1,6 @@
 ![LambdaTest Logo](https://www.lambdatest.com/static/images/logo.svg)
 ---
-# jest-selenium-webdriver-sample
+# Jest Selenium Webdriver Sample
 
 ### Environment Setup
 
