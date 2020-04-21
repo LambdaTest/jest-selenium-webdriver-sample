@@ -1,14 +1,14 @@
 ![LambdaTest Logo](https://www.lambdatest.com/static/images/logo.svg)
 ---
 # Jest Tutorial For Selenium Test Automation
----
+
 ![Jest Tutorial](https://www.lambdatest.com/blog/wp-content/uploads/2020/04/Jest-Tutorial.jpg)
 
 Jest is  an open source javascript testing framework developed by Facebook.Jest has exceptional  benefits of  easy set up, super fast execution,and provides an excellent combination of a test runner & an assertion library. 
 
 This tutorial will help you run Jest automation scripts over LambdaTest Selenium Grid.
 ## Prerequisites for Jest tutorial
----
+
 **1.** Download an IDE. You can use **[Visual Studio IDE](https://code.visualstudio.com/download)** for your operating system.
 
 **2. Node.js and Package Manager (npm)** : Install Node.js from their [official website](https://nodejs.org/en/download/) Or Install Node.js using command line. Go to the terminal or command prompt & run the below command.
@@ -42,7 +42,7 @@ Set **LambdaTest Username** and **Access Key** in environment variables.
     set LT_ACCESS_KEY="YOUR ACCESS KEY"
     ```
 ## Setting Up The Project For Selenium Jest Tutorial In IDE
----
+
 **Step 1** : After installation of the Visual Studio IDE, create a folder in your local system to save all the projects.
 
 **Step 2** : Install the below extensions for JavaScript from ‘Extensions’ in VScode Editor.
@@ -123,7 +123,6 @@ Set **LambdaTest Username** and **Access Key** in environment variables.
 }
 ```
 ## Executing First Script For Jest & Selenium Testing
----
 
 **Test Scenario**: In this Jest tutorial, we will be creating a script that will invoke the browser launch with [LambdaTest TodoList Sample App](https://lambdatest.github.io/sample-todo-app/) that includes functionalities like check the box, typing text to add more items in the list, click  on Add button to add it into the list and will be  using assertions to verify the test cases. If assert returns true,  the test cases  pass successfully and show up in the automation logs dashboard, else if assert returns false, the test case fails, and the errors will be displayed in the automation log.
 
@@ -245,18 +244,20 @@ function updateJob(sessionId, status) {
 > The capabilities class was generated from the [LambdaTest Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).    
 
 ## Running The Jest Script On LambdaTest Selenium Grid
----
+
 Open the command line in the same directory where the GitHub repository for jest sample code is  cloned, navigate to the **test** folder & run the below command.
 ```
 npm test single.test.js
 ```
 Once the test case is executed, you can assess its status over the LambdaTest Automation Dashboard. You can figure out whether the test has passed or failed, and can review the various kinds of test logs such as network logs, command logs, raw Selenium logs, and even video recording of the entire test execution. You will see the test result in the [lambdatest Dashboard](https://automation.lambdatest.com).
-
+![LambdaTest Automation Dashboard](https://github.com/LambdaTest/jest-selenium-webdriver-sample/blob/master/tutorial-images/automation-dashboard.PNG)
 
 If you notice your console output in the command line or terminal. You will find the below output.
+![Command Line Output For Jest Tutorial Script](https://github.com/LambdaTest/jest-selenium-webdriver-sample/blob/master/tutorial-images/console_output.PNG)
+
 
 ## Test Your Locally Hosted Web Applications
----
+
 You can also perform cross browser testing of your [locally hosted web application using Lambda Tunnel](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/). Lambda Tunnel establishes a secure shell connection between your localhost and our cloud servers to help you execute Selenium test automation for privately hosted projects. 
 
 All you need to do is set the tunnel variable as true in your desired capabilities for running your Selenium script with Lambda Tunnel.
@@ -358,13 +359,10 @@ npm test local.test.js
 ```
 
 ## About LambdaTest
----
+
 [LambdaTest](https://www.lambdatest.com/) is a cloud based selenium grid infrastructure that can help you run automated cross browser compatibility tests on 2000+ different browser and operating system environments. LambdaTest supports all programming languages and frameworks that are supported with Selenium, and have easy integrations with all popular CI/CD platforms. It's a perfect solution to bring your [selenium automation testing](https://www.lambdatest.com/selenium-automation) to cloud based infrastructure that not only helps you increase your test coverage over multiple desktop and mobile browsers, but also allows you to cut down your test execution time by running tests on parallel.
 
 ### Resources
 
 ##### [SeleniumHQ Documentation](http://www.seleniumhq.org/docs/)
 ##### [Jest Documentation](https://jestjs.io/en/)
-  
-
-
