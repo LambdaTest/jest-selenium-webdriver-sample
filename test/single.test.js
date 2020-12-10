@@ -13,12 +13,9 @@ const AutomationClient = LambdaTestRestClient.AutomationClient({
 const capabilities = {
   build: 'jest-LambdaTest-Single',
   browserName: 'chrome',
-  version: '72.0',
-  platform: 'WIN10',
-  video: true,
-  network: true,
-  console: true,
-  visual: true
+  version: 'latest',
+  platform: 'Windows 10',
+
 };
 
 const getElementById = async (driver, id, timeout = 2000) => {

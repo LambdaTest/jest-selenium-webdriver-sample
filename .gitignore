@@ -1,2 +1,3 @@
 /node_modules
 lambda_api.log
+package-lock.json
