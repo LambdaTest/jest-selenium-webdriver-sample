@@ -9,8 +9,4 @@ ports:
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - init: npm install --save-dev jest && npm install
-<<<<<<< HEAD
     command: npm test ./test/single.test.js
-=======
-    command: npm test single.test.js
->>>>>>> 425388b52f57c123515421df7b4c48e3103e3390
