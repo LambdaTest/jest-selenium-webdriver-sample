@@ -15,6 +15,10 @@ const capabilities = {
   browserName: 'chrome',
   version: 'latest',
   platform: 'Windows 10',
+<<<<<<< HEAD
+=======
+
+>>>>>>> 425388b52f57c123515421df7b4c48e3103e3390
 };
 
 const getElementById = async (driver, id, timeout = 2000) => {

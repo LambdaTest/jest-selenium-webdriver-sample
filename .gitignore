@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 node_modules/
+=======
+/node_modules
+>>>>>>> 425388b52f57c123515421df7b4c48e3103e3390
 lambda_api.log
 package-lock.json
