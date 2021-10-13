@@ -25,7 +25,7 @@ $ npm install npm@latest -g
 ```
 **3.** Next, you need to **install Jest**. Run the below command to install Jest:
 ```
-$ npm install --save-dev jest
+$ npm install --save-dev jest --force
 ```
 **4. LambdaTest Authentication Credentials**: Make sure you have your LambdaTest credentials with you to run test automation scripts with Jest on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/) or through [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile).
 

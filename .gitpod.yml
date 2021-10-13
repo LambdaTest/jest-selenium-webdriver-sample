@@ -2,5 +2,5 @@
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: npm install --save-dev jest && npm install
+  - init: npm install --save-dev jest --force && npm install
     command: npm test ./test/single.test.js
