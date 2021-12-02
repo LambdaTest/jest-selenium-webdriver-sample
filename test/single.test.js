@@ -71,12 +71,13 @@ describe('webdriver', () => {
 
       const output = await getElementByXpath(
         driver,
-        '//html/body/div/div/div/ul/li[6]/span'
+        '//html/body/div/div/div/ul/li[5]/span'
       );
       const outputVal = await output.getText();
-      expect(outputVal).toEqual("Yey, Let's add it to list");
+      expect(outputVal).toEqual("Fifth Item");
       await updateJob(sessionId, 'passed');
     } catch (err) {
+      await updateJob(sessionId, 'failed');
       await webdriverErrorHandler(err, driver);
       throw err;
     }
