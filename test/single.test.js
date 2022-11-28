@@ -11,11 +11,15 @@ const AutomationClient = LambdaTestRestClient.AutomationClient({
   accessKey
 });
 const capabilities = {
-  build: 'jest-LambdaTest-Single',
-  browserName: 'chrome',
-  version: 'latest',
-  platform: 'Windows 10',
-};
+	"browserName": "Chrome",
+	"browserVersion": "108.0",
+	"LT:Options": {
+		"platformName": "Windows 10",
+		"project": "Untitled",
+		"w3c": true,
+		"plugin": "node_js-jest"
+	}
+}
 
 const getElementById = async (driver, id, timeout = 2000) => {
   const el = await driver.wait(until.elementLocated(By.id(id)), timeout);
