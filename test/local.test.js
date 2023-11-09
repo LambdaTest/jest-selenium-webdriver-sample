@@ -46,9 +46,7 @@ describe('webdriver', () => {
     await btn.click();
 
     const output = await getElementByXpath(
-      driver,
-      '//html/body/div/div/div/ul/li[6]/span'
-    );
+      driver, "//input[@name='li6']/following-sibling::span");
     const outputVal = await output.getText();
     expect(outputVal).toEqual("Yey, Let's add it to list");
   }, 10000);
