@@ -11,14 +11,15 @@ const AutomationClient = LambdaTestRestClient.AutomationClient({
   accessKey
 });
 const capabilities = {
-	"browserName": "Chrome",
-	"browserVersion": "108.0",
-	"LT:Options": {
-		"platformName": "Windows 10",
-		"project": "Untitled",
-		"w3c": true,
-		"plugin": "node_js-jest"
-	}
+  "browserName": "Chrome",
+  "browserVersion": "118.0",
+  "LT:Options": {
+    "platformName": "Windows 10",
+    "project": "Jest-Lambdatest-Project",
+    "build": "jest-lambdatest-build",
+    "w3c": true,
+    "plugin": "node_js-jest"
+  }
 }
 
 const getElementById = async (driver, id, timeout = 2000) => {
@@ -47,7 +48,7 @@ describe('webdriver', () => {
       )
       .withCapabilities(capabilities)
       .build();
-    await driver.getSession().then(function(session) {
+    await driver.getSession().then(function (session) {
       sessionId = session.id_;
     });
     // eslint-disable-next-line no-undef
@@ -75,10 +76,9 @@ describe('webdriver', () => {
 
       const output = await getElementByXpath(
         driver,
-        '//html/body/div/div/div/ul/li[5]/span'
-      );
+        "//input[@name='li6']/following-sibling::span");
       const outputVal = await output.getText();
-      expect(outputVal).toEqual("Fifth Item");
+      expect(outputVal).toEqual("Yey, Let's add it to list");
       await updateJob(sessionId, 'passed');
     } catch (err) {
       await updateJob(sessionId, 'failed');
@@ -93,7 +93,7 @@ async function webdriverErrorHandler(err, driver) {
   if (driver && sessionId) {
     try {
       await driver.quit();
-    } catch (_) {}
+    } catch (_) { }
     await updateJob(sessionId, 'failed');
   }
 }

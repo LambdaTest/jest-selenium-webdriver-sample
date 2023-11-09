@@ -28,13 +28,6 @@
     "rimraf": "^2.6.3",
     "selenium-webdriver": "^4.0.0"
   },
-  "jest": {
-    "setupTestFrameworkScriptFile": "./jest.config.js",
-    "testEnvironment": "jest-environment-webdriver",
-    "testEnvironmentOptions": {
-      "browser": "chrome"
-    }
-  },
   "dependencies": {
     "@lambdatest/node-rest-client": "^1.0.0"
   }
