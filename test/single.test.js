@@ -53,7 +53,7 @@ describe('webdriver', () => {
     });
     // eslint-disable-next-line no-undef
     await driver.get(`https://lambdatest.github.io/sample-todo-app/`);
-  }, 30000);
+  }, 120000);
 
   afterAll(async () => {
     await driver.quit();
