@@ -24,7 +24,7 @@ describe('webdriver', () => {
     driver = new webdriver.Builder().forBrowser('chrome').build();
 
     // eslint-disable-next-line no-undef
-    await driver.get(`https://lambdatest.github.io/sample-todo-app/`);
+    await driver.get(`https://www.testmuai.com/selenium-playground/todo-app/`);
   }, 10000);
 
   afterAll(async () => {
